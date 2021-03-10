@@ -21,7 +21,9 @@
 	<a-entity light="type: ambient; color: #FFFFFF; intensity: 0.5" position="0 1 0";></a-entity>
 
 
-        <a-marker preset="hiro">
+        
+        	<a-marker-camera type='pattern' url='pattern-marker.patt'>
+
         	 <a-box  color="#8EACBB; shadow="cast: true; receive: true" 
 	material="src: 2.jpg; repeat: 1 1; roughness: 1; metalness: 0" 
 	position="0 0.1 0"
@@ -35,7 +37,7 @@
 			gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf">
 			</a-entity>
 			-->
-        </a-marker>
+        </a-marker-camera>
 		
 		    <a-entity camera></a-entity>
 		<canvas class="a-canvas" data-aframe-canvas="true" width="1257" height="942"></canvas>
