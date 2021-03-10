@@ -9,6 +9,8 @@
     width: 100%;
 }
 </style>
+	<script src="displacement-offset-shader.js"></script>
+
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support ///////////////////////////////////////////////////////////////ONLINE////ONLINE/////ONLINE//////ONLINE//////ONLINE/////ONLINE///ONLINE//// -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -16,7 +18,7 @@
         <a-scene embedded arjs>    
 
 	
-	<a-entity light="type: directional; color: #FBF8EF; intensity: 0.85" position="-0.5 1 0.5";></a-entity>
+	<a-entity light="type: directional; color: #FBF8EF; intensity: 0.7" position="-0.2 1 0.2";></a-entity>
 	<a-entity light="type: ambient; color: #FFFFFF; intensity: 0.5" position="0 1 0";></a-entity>
 
 
@@ -26,6 +28,13 @@
 	position="0 0.1 0"
 	scale="2.1 0.002 3" >
 	</a-box>
+	<a-sphere material="shader:displacement-offset"
+                myoffset-updater
+                scale="1 1 1"
+                radius="0.2"
+                position="0 1.5 -2"
+                segments-height="128"
+                segments-width="128">
 			<!--
 			<a-entity position="0 -0.5 0.5" 
 			rotation="90 0 0" 
