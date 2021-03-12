@@ -43,21 +43,33 @@
                 id="markerA"
             >   
             	<a-box shadow="cast: true; receive: true" 
-				material="assets/Frages01.jpg; repeat: 1 1; roughness: 1; metalness: 0" 
-				position="0 0.1 0"
+				material="src: assets/Frages01.jpg; repeat: 1 1; roughness: 1; metalness: 0" 
+				position="0 0.05 0"
 				scale="2.1 0.002 2.97" 
-				>
+				class="clickable"
+    			gesture-handler>
     			
 			</a-marker>
        
-                 <a-marker preset='hiro'>
-
-        	 <a-box shadow="cast: true; receive: true" 
-	material="src: 2.jpg; repeat: 1 1; roughness: 1; metalness: 0" 
-	position="0 0.1 0"
-	scale="2.1 0.002 3" 
-	class="clickable"
-    gesture-handler>
+               <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/marker02.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerB"
+            >   
+            	<a-image
+                    src="assets/asset.png"
+                    scale="1 1 1"
+                    class="clickable"
+                    rotation="-90 0 0"
+                    gesture-handler
+                ></a-image>
+    			
+			</a-marker>
 
 	</a-box>
 	
