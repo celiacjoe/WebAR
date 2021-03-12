@@ -28,8 +28,8 @@
             gesture-detector
         >
 
-        <a-entity light="type: directional; color: #FBF8EF; intensity: 0.7" position="-0.2 1 0.2";></a-entity>
-		<a-entity light="type: ambient; color: #FFFFFF; intensity: 0.5" position="0 1 0";></a-entity>
+        <a-entity light="type: directional; color: #FBF8EF; intensity: 0.5" position="-0.2 1 0.2";></a-entity>
+		<a-entity light="type: ambient; color: #FFFFFF; intensity: 0.7" position="0 1 0";></a-entity>
 
 
             <a-marker
@@ -44,22 +44,24 @@
             >   
             	<a-box shadow="cast: true; receive: true" 
 				material="src: Frages01.jpg; repeat: 1 1; roughness: 1; metalness: 0" 
-				position="0 0.05 0"
-				scale="2.1 0.002 2.97" 
+				position="0 0 0"
+				scale="1.4 0.002 1.98" 
 				class="clickable"
+				rotation="-90 0 0"
     			gesture-handler>
+    			</a-box>
     			
 			</a-marker>
        
-               <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker02.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerB"
+            <a-marker
+            id="animated-marker"
+            type="pattern"
+            preset="custom"
+            url="assets/marker02.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerB"
             >   
             	<a-image
                     src="assets/asset.png"
@@ -71,7 +73,7 @@
     			
 			</a-marker>
 
-	</a-box>
+	
 	
 			<!--
 			<a-entity position="0 -0.5 0.5" 
@@ -80,7 +82,7 @@
 			gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf">
 			</a-entity>
 			-->
-        </a-marker>
+
 
 		
 		    <a-entity camera></a-entity>
