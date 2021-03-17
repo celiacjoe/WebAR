@@ -30,7 +30,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>Loading, please wait093...</div>
+    <div>Loading, please wait094...</div>
   </div>
   <a-scene
     vr-mode-ui="enabled: false;"
@@ -56,10 +56,8 @@
       >
       </a-entity>
 
-        <a-box shadow="cast: true; receive: true" 
-        position="0 0 0"
-        scale="1.4 0.002 1.98" >
-          </a-box>
+    <a-entity geometry="primitive: box" material="shader: flat; color: red"  scale="1 1 1"
+        position="0 0 0"></a-entity>
 
     </a-nft>
     <a-entity camera></a-entity>
