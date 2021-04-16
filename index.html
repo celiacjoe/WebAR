@@ -49,14 +49,19 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>Loading, please wait_Poster...</div>
+    <div>Loading, please wait_Poster02...</div>
   </div>
   <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
+        vr-mode-ui="enabled: false;"
+        renderer='antialias: true; alpha: true; precision: mediump;'
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+
+        <a-assets>
+            <video src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/celiacjoe/WebAR/main/Raw/FRAG04_Vid.mp4"
+                preload="auto" id="vid" response-type="arraybuffer" loop
+                crossorigin webkit-playsinline autoplay muted playsinline>
+            </video>
+        </a-assets>
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
       type="nft"
@@ -66,10 +71,18 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >
+            <a-video
+                src="#vid"
+                position='50 150 -100'
+                width='175'
+                height='300'
+                >
+            </a-video>
 
-
-    <a-entity geometry="primitive: box" material="shader: flat; color: red"  scale="2 2 2"
-        position="0 0 0"></a-entity>
+            <a-entity geometry="primitive: box" material="shader: flat; color: red"  scale="2 2 2"
+                position="0 0 0">
+                  
+            </a-entity>
 
     </a-nft>
     <a-entity camera></a-entity>
