@@ -53,7 +53,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>Loading, please wait_Poster27...</div>
+    <div>Loading, please wait_Poster272...</div>
   </div>
   <a-scene
         vr-mode-ui="enabled: false;"
@@ -61,7 +61,7 @@
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
         <a-assets>
-            <video src="Raw/FRAG04_Vid2.mp4"
+            <video src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/celiacjoe/WebAR/main/Raw/FRAG04_Vid2.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop
                 crossorigin webkit-playsinline autoplay muted playsinline>
             </video>
@@ -77,10 +77,10 @@
     >
             <a-video
                 src="#vid"
-                position='250 0 50'
+                position='50 0 50'
                 rotation="-90 0 0"
-                width='300'
-                height='540'
+                width='200'
+                height='360'
                 >
             </a-video>
 
