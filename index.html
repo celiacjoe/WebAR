@@ -29,6 +29,10 @@
             gesture-detector
         >
 
+        <a-assets>
+          <video crossOrigin="anonymous" id="vid" autoplay loop="true" type="video/mp4" src="assets/mov_bbb">
+        </a-assets>
+
         <a-entity light="type: directional; color: #FBF8EF; intensity: 0.5" position="-0.2 1 0.2";></a-entity>
 		<a-entity light="type: ambient; color: #FFFFFF; intensity: 0.7" position="0 1 0";></a-entity>
 
@@ -43,7 +47,9 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >   
-            	<a-box shadow="cast: true; receive: true" 
+            <a-video src="#vid" width="1.78" height="1" rotation="270 0 0" play="true"></a-video>
+            	
+              <!--  <a-box shadow="cast: true; receive: true" 
 				material="src: Frages01.jpg; repeat: 1 1; roughness: 1; metalness: 0" 
 				position="0 0 0"
 				scale="1.4 0.002 1.98" 
@@ -51,29 +57,10 @@
 				
     			gesture-handler>
     			</a-box>
-    			
+    			-->
 			</a-marker>
        
-            <a-marker
-            id="animated-marker"
-            type="pattern"
-            preset="custom"
-            url="assets/marker02.patt"
-            raycaster="objects: .clickable"
-            emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;"
-            id="markerB"
-            >   
-            	<a-image
-                    src="assets/asset.png"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-image>
-    			
-			</a-marker>
-
+           
 	
 	
 			<!--
